@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/pico.cyan.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="mt-5"><img src="icons/icon-128.png" width="50px" height="50px"/> Yoink!</h2>
+      <label>Enter query selector</label>
+      <input id="query" type="text" placeholder="Enter CSS selector (e.g., .class, #id, element)">
+      <label for="content-type">Choose content type:</label>
+      <select width="100%" name="select" id="content-type">
+        <option value="text">Text</option>
+        <option value="html">HTML</option>
+        <option value="attribute">Attribute</option>
+      </select>
+      <input width="100%" type="text" id="attribute-name" placeholder="Attribute name (e.g., href)" style="display:none;">
+      <button type="submit" id="extract">Extract from page</button>
+      </br>
+      </br>
+      <textarea id="result" rows="3" name="bio" placeholder="Results from query will appear here..."></textarea>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
