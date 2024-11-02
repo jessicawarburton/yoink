@@ -18,7 +18,7 @@ document.getElementById('extract').addEventListener('click', async function() {
 document.addEventListener('DOMContentLoaded', async () => {
     const lastQuery = await browser.storage.local.get('query');
     const queryValue = document.getElementById('query');
-    if (lastQuery) {
+    if (lastQuery && lastQuery.query) {
         queryValue.value = lastQuery.query;
     }
 });
